@@ -1,0 +1,29 @@
+{{ define "page/Blog" }}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ .PageTitle }}</title>
+    {{ template "tmpl/head" }}
+</head>
+<body>
+    <div class="flex justify-center items-center mt-10 mb-10">
+        <a href="/">
+            <h1 class="decoration-emerald-400 underline">boonsboos</h1>
+        </a>
+    </div>
+    <div id="posts" class="flex flex-col justify-center items-center gap-2">
+        <h2 class="underline text-left">Posts</h2>
+        <div class="flex flex-col gap-4">
+            {{ range .Posts }}
+                {{ template "tmpl/postcard" . }}
+            {{ end }}
+        </div>
+    </div>
+</body>
+<footer class="flex justify-center mt-1">
+    <p class="text-black dark:text-emerald-50">&copy; 2024 boonsboos </p>
+</footer>
+</html>
+{{ end }}

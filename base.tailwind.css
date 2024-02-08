@@ -1,0 +1,112 @@
+@tailwind base;
+@layer base {
+    html {
+        @apply bg-slate-100;
+        @apply dark:bg-neutral-800;
+    }
+    h1 {
+        @apply text-6xl;
+        @apply text-black;
+        @apply dark:text-emerald-50;
+    }
+    h2 {
+        @apply text-2xl;
+        @apply text-black;
+        @apply dark:text-emerald-50;
+    }
+    h3 {
+        @apply text-xl;
+        @apply text-black;
+        @apply dark:text-emerald-50;
+    }
+    a {
+        @apply hover:underline;
+        @apply text-emerald-600;
+        @apply dark:text-emerald-300;
+    }
+    p{
+        @apply sm:text-lg;
+        @apply text-sm;
+        @apply text-black;
+        @apply dark:text-emerald-50;
+    }
+    pre {
+        @apply bg-green-50;
+        @apply dark:bg-neutral-900;
+        @apply border-2;
+        @apply border-emerald-500;
+        @apply rounded;
+        @apply p-2;
+    }
+    code {
+        @apply sm:text-lg;
+        @apply text-sm;
+        @apply leading-snug;
+        @apply break-words;
+        @apply sm:text-lg;
+        @apply text-sm;
+        @apply text-black;
+        @apply dark:text-emerald-50;
+    }
+    blockquote {
+        @apply dark:prose-invert;
+        @apply border-l-2;
+        @apply border-gray-400;
+        @apply pl-2;
+        @apply italic;
+    }
+    hr {
+        @apply text-black;
+        @apply dark:text-emerald-50;
+    }
+    .postcard {
+        @apply box-border;
+        @apply hover:border-emerald-500;
+        @apply border-slate-100;
+        @apply dark:border-neutral-800;
+        @apply dark:hover:border-emerald-200;
+        @apply border-2;
+    }
+    /* syntax highlighting theme as required by chroma*/
+    .chroma {
+        tab-size: 4;
+        @apply whitespace-pre-wrap;
+        word-break: break-word;
+    }
+    .line { 
+        @apply flex;
+    }
+    .k,.kc,.kd,.kn,.kr,.kt,.nt {
+        @apply dark:text-emerald-400;
+        @apply text-emerald-600;
+        @apply font-bold;
+    }
+    .kp {
+        @apply dark:text-emerald-400;
+        @apply text-emerald-600;
+    }
+    .p, .nx {
+        @apply sm:text-lg;
+        @apply text-sm;
+        @apply text-black;
+        @apply dark:text-emerald-50;
+    }
+    .nf {
+        @apply sm:text-lg;
+        @apply text-sm;
+        @apply text-black;
+        @apply dark:text-emerald-50;
+        @apply italic;
+    }
+    .c {
+        @apply dark:text-gray-600; 
+        @apply text-gray-500;
+        @apply italic;
+    }
+    .s,.sr {
+        @apply text-lime-600;
+        @apply dark:text-lime-600;
+    }
+}
+@tailwind components;
+@tailwind utilities;
