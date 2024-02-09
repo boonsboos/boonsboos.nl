@@ -31,7 +31,7 @@
         @apply dark:text-emerald-50;
     }
     pre {
-        @apply bg-green-50;
+        @apply bg-white;
         @apply dark:bg-neutral-900;
         @apply border-2;
         @apply border-emerald-500;
