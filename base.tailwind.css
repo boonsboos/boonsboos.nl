@@ -26,7 +26,7 @@
     }
     p{
         @apply sm:text-lg;
-        @apply text-md;
+        @apply text-base;
         @apply text-black;
         @apply dark:text-emerald-50;
     }
@@ -39,12 +39,10 @@
         @apply p-2;
     }
     code {
-        @apply sm:text-lg;
+        @apply sm:text-base;
         @apply text-sm;
         @apply leading-snug;
         @apply break-words;
-        @apply sm:text-lg;
-        @apply text-sm;
         @apply text-black;
         @apply dark:text-emerald-50;
     }
@@ -86,14 +84,10 @@
         @apply text-emerald-600;
     }
     .p, .nx {
-        @apply sm:text-md;
-        @apply text-sm;
         @apply text-black;
         @apply dark:text-emerald-50;
     }
     .nf {
-        @apply sm:text-md;
-        @apply text-sm;
         @apply text-black;
         @apply dark:text-emerald-50;
         @apply italic;
