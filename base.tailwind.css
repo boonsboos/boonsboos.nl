@@ -1,4 +1,23 @@
-@tailwind base;
+@import 'tailwindcss';
+
+@plugin "@tailwindcss/typography";
+
+/* safelisting */
+@source inline("k");
+@source inline("kc");
+@source inline("kd");
+@source inline("kn");
+@source inline("kr");
+@source inline("kt");
+@source inline("nt");
+@source inline("kp");
+@source inline("nx");
+@source inline("c");
+@source inline("s");
+@source inline("sr");
+@source inline("nf");
+@source inline("p");
+
 @layer base {
     html {
         @apply bg-slate-100;
@@ -19,26 +38,37 @@
         @apply text-black;
         @apply dark:text-emerald-50;
     }
+    h4 {
+        @apply text-lg;
+        @apply text-black;
+        @apply dark:text-emerald-50;
+        @apply font-semibold;
+    }
     a {
         @apply hover:underline;
         @apply text-emerald-600;
         @apply dark:text-emerald-300;
     }
-    p{
+    p, td,th {
         @apply sm:text-lg;
         @apply text-base;
         @apply text-black;
         @apply dark:text-emerald-50;
     }
-    pre {
+    th td {
+        @apply font-bold
+    }
+    thead:has(th:empty) {
+        display: none;
+    }
+    pre, table {
         @apply bg-white;
         @apply dark:bg-neutral-900;
         @apply border-2;
         @apply border-emerald-500;
-        @apply rounded;
         @apply p-2;
     }
-    code {
+    code, table {
         @apply sm:text-base;
         @apply text-sm;
         @apply leading-snug;
@@ -56,6 +86,10 @@
     hr {
         @apply text-black;
         @apply dark:text-emerald-50;
+    }
+    td {
+        @apply border-1;
+        padding: 0.4rem;
     }
     .postcard {
         @apply box-border;
@@ -102,5 +136,8 @@
         @apply dark:text-lime-600;
     }
 }
-@tailwind components;
-@tailwind utilities;
+
+@theme {
+    --font-mono: "Roboto Mono", monospace;
+    --font-sans: "Roboto Mono", monospace;
+}

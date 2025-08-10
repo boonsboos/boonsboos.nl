@@ -16,7 +16,7 @@
     <div id="posts" class="flex flex-col justify-center items-center gap-2">
         <h2 class="underline text-left">{{ .Post.Info.Title }}</h2>
         <p>{{ .Post.Info.Date }}</p>
-        <div class="flex flex-col gap-4 md:max-w-[42rem] md:min-w-[42rem] sm:max-w-screen-sm sm:min-w-72 break-words p-2">
+        <div class="flex flex-col gap-4 md:max-w-2xl md:min-w-2xl sm:max-w-(--breakpoint-sm) sm:min-w-72 break-words p-2">
             {{ .Post.Content }}
         </div>
     </div>

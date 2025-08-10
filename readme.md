@@ -9,11 +9,12 @@ custom blog system for my personal site
 
 ### requirements
 - go (>=1.21)
-- tailwind cli (>=1.3.4)
+- node (>= 20)
 
 ### building
 ```shell
-tailwindcss -o static/s.css -m
+npm install
+npx @tailwindcss/cli -i ./base.tailwind.css -o ./static/s.css
 export GIN_MODE=release; go run .
 ```
 
